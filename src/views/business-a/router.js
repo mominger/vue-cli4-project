@@ -8,15 +8,21 @@ export default [
     },
     component: () =>
       import(
-        /* webpackChunkName: "business-a-page-a" */ "./business-a-page-a/index.vue"
+        /* webpackChunkName: "business-a-page-a" */
+        "./business-a-page-a/index.vue"
       )
   },
   {
     path: "/business-a/page-b",
     name: "business-a-page-b",
+    meta: {
+      auth: true,
+      title: "需要登录才能访问的页"
+    },
     component: () =>
       import(
-        /* webpackChunkName: "business-a-page-b" */ "./business-a-page-b/index.vue"
+        /* webpackChunkName: "business-a-page-b" */
+        "./business-a-page-b/index.vue"
       )
   }
 ];

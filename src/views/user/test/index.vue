@@ -26,12 +26,6 @@ export default {
       });
       this.msg = data.message;
 
-      //测试设置token
-      this.setToken({ token: "token234242dd" });
-
-      //测试读取token
-      console.info("....read token form store:", this.token);
-
       console.info(data);
     } catch (e) {
       this.$throw(e);
