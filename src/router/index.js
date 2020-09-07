@@ -1,13 +1,16 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import businessA from '@/router/business-a'
+import Vue from "vue";
+import VueRouter from "vue-router";
 
-Vue.use(Router)
+Vue.use(VueRouter);
 
-export default new Router({
-  mode: 'history',
-  base: `/${process.env.PUBLIC_PATH}/`,
-  routes: [
-    ...businessA
-  ]
-})
+const routes = [
+  ...require("../views/misc").default,
+  ...require(`../views/business-a/router.js`).default
+];
+const router = new VueRouter({
+  mode: "history",
+  base: process.env.VUE_APP_PUBLIC_PATH,
+  routes
+});
+
+export default router;
