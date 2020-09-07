@@ -5,6 +5,7 @@
     <component-a></component-a>
     现在的时间是 {{ new Date() | dateFilter("YYYY年MM月DD日 HH:mm:ss") }}
     <a-common-component parent="business-a-page-a" />
+    <g-a-component parent="business-a-page-a" />
   </div>
 </template>
 

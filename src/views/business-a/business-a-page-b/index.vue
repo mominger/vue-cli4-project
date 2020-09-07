@@ -8,11 +8,17 @@
 
 <script>
 import ACommonComponent from "@/components/a-common-component";
+import tokenMixin from "@/mixins/token-mixin";
 
 export default {
   name: "business-a-page-b",
+  mixins: [tokenMixin],
   components: {
     ACommonComponent
+  },
+  created() {
+    //测试获取mixins的token获取
+    console.info("business-a-page-b page:", this.token);
   }
 };
 </script>

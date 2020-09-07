@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import "./utils/errorLog.js";
 import auth from "./router/routerFilter";
+import "./components";
 
 Vue.config.productionTip = false;
 
