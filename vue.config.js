@@ -31,6 +31,10 @@ module.exports = {
         }
     },
     configureWebpack: {
-        plugins: plugins
+        plugins: plugins,
+        /* externals: {
+          vue: "window.Vue",
+          "vue-router": "window.VueRouter"
+        } */
     }
 };
