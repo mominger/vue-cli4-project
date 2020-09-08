@@ -1,33 +1,39 @@
 {
-  "name": "vue-cli4-project",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "axios": "^0.20.0",
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-vue": "^6.2.2",
-    "node-sass": "^4.12.0",
-    "prettier": "^1.19.1",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  }
+    "name": "vue-cli4-project",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "mock": "cross-env NODE_ENV=mock node ./scripts/serve.js",
+        "dev": "cross-env NODE_ENV=development node ./scripts/serve.js",
+        "test": "cross-env NODE_ENV=test node ./scripts/serve.js",
+        "build": "vue-cli-service build",
+        "serve": "cross-env node ./scripts/serve.js",
+        "lint": "eslint --fix --ext .js,.vue src",
+        "inspect": "vue-cli-service inspect > webpack.config.js",
+        "inspect:prod": "vue-cli-service inspect --mode=production > webpack.config.prod.js"
+    },
+    "dependencies": {
+        "axios": "^0.20.0",
+        "core-js": "^3.6.5",
+        "vue": "^2.6.11",
+        "vue-router": "^3.0.7",
+        "vuex": "^3.4.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-plugin-router": "~4.5.0",
+        "@vue/cli-plugin-vuex": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "babel-eslint": "^10.1.0",
+        "cross-env": "^7.0.2",
+        "eslint": "^6.7.2",
+        "eslint-plugin-prettier": "^3.1.3",
+        "eslint-plugin-vue": "^6.2.2",
+        "node-sass": "^4.12.0",
+        "prettier": "^1.19.1",
+        "sass-loader": "^8.0.2",
+        "vue-template-compiler": "^2.6.11"
+    }
 }
